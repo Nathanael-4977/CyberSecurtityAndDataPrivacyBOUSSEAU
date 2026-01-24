@@ -3,9 +3,9 @@
 
 | Date  | Used hours | Subject(s) |  Outcome(s) |
 | :---         |     :---:      |     :---:      |     :---:      |
-| 23.10.2025 | 4 | Preparing the course | Updated content |
-| 24.10.2025 | 4 | Preparing the course | Updated tasks  |
-| 28.10.2025 | 2 | Kick-off lecture  | Course started |
-| 3.11.2025 | 2 | Preparing for the lecture  | Material uptaded |
-| 4.11.2025 | 3 | Preparing for the lecture  | Material uptaded |
-| 4.11.2025 | 2 | Lecture intro to portswigger  | Lecture regording |
+| 15.01.2026 | 2 | Attending the online course | Know Assignments |
+| 18.01.2026 | 1 | Module 1 Cisco | Learning Cyber Basics |
+| 21.01.2026 | 2 | Attending the online course  | Learning about the tools |
+| 21.01.2026 | 1 | Module 2 Cisco  | Learning CyberAttacks and Technics |
+| 22.01.2026 | 1 | Module 3 Cisco | Learning Data Protection |
+| 24.01.2026 | 2 | Module 4, 5 and Final Exam Cisco  | Finishing the Introduction to Cyber|
