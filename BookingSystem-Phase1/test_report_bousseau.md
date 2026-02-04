@@ -26,11 +26,11 @@
 **Overall risk level:** Critical
 
 **Top 5 immediate actions:**  
-1. Allowed or not allowed list : Do not trust client side verification. Do not create dynamic SQL queries using simple string concatenation. Apply a list of allowed and not allowed characters.
-2. Secure Password storage : Hash or encrypt all sensitive datas on the database.
+1. Use prepared statement: Do not trust client side verification. Do not create dynamic SQL queries using simple string concatenation. Apply a list of allowed and not allowed characters.
+2. Secure password storage : Hash or encrypt all sensitive datas on the database.
 3. Enable anti CSRF token protection : Add unique and random anti-CRSF tokens to the registration form.
-4. Enforce Backend Validation: Add server-side checks for age requirements (15+). 
-5. Enforce Strong Password Policies: Define and implement minimum requirements for password length and complexity.
+4. Enforce backend validation: Add server-side checks for age requirements (15+). 
+5. Enforce strong password: Define and implement minimum requirements for password length and complexity.
 
 ---
 
@@ -53,10 +53,13 @@
 | ID | Severity | Finding | Description | Evidence / Proof |
 |------|-----------|----------|--------------|------------------|
 | F-01 | 🔴 High | SQL Injection in registration | Input field allows `AND 1=1 --` injection | ZAP scan : `foo-bar@example.com AND 1=1 --` allowed |
-| F-01 | 🔴 High | Visible Passwords | Passwords are not encrypted in the database | <img width="843" height="140" alt="image" src="https://github.com/user-attachments/assets/191c9bc4-b1e7-46b4-b502-13b924964199" /> |
-| F-02 | 🟠 Medium | Absence of birthdate verification | Allows any birthdate, ignoring the age requirement | <img width="843" height="140" alt="image" src="https://github.com/user-attachments/assets/ede47e6b-5ea3-4a2b-8f1f-62190412613f" /> |
-| F-02 | 🟠 Medium | Absence of Anti-CSRF Tokens | Lack of anti-CSRF tokens allows attackers to force unauthorized registrations | Zap Scan |
-| F-03 | 🟡 Low | Weak password policy | Accepts passwords like "a"| <img width="843" height="140" alt="image" src="https://github.com/user-attachments/assets/ede47e6b-5ea3-4a2b-8f1f-62190412613f" />|
+| F-02 | 🔴 High | Visible Passwords | Passwords are not hashed in the database | <img width="843" height="140" alt="image" src="https://github.com/user-attachments/assets/191c9bc4-b1e7-46b4-b502-13b924964199" /> |
+| F-03 | 🟠 Medium | Absence of birthdate verification | Allows any birthdate, ignoring the age requirement | <img width="843" height="140" alt="image" src="https://github.com/user-attachments/assets/ede47e6b-5ea3-4a2b-8f1f-62190412613f" /> |
+| F-04 | 🟠 Medium | Absence of Anti-CSRF Tokens | Lack of anti-CSRF tokens allows attackers to force unauthorized registrations | Zap Scan |
+| F-05 | 🟡 Low | Weak password policy | Accepts passwords like "a"| <img width="843" height="140" alt="image" src="https://github.com/user-attachments/assets/ede47e6b-5ea3-4a2b-8f1f-62190412613f" />|
 |
 
+5️⃣ OWASP ZAP Test Report (Attachment):
+
+Link to the zap test report : ./zap_report_round1
 
