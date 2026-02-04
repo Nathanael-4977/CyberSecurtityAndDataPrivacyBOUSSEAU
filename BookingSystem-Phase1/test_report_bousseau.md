@@ -13,7 +13,7 @@
 
 **Test environment & dates:**  
 - Start:February 2 2026  
-- End: February 3 2026 
+- End: February 4 2026 
 - Test environment details (OS, runtime, DB, browsers): Docker Desktop, PostgreSQL database, Windows 11, Google Chrome.
 
 **Assumptions & constraints:**  
@@ -21,16 +21,16 @@
 
 # 2️⃣ Executive Summary
 
-**Short summary (1-2 sentences):**  
+**Short summary (1-2 sentences):**  The registration system of this booking system is critycally vulnerable to some types of attacks, including SQL injections. Datas are not encrypted and the system does not apply business rules like age restrictions.
 
-**Overall risk level:** (Low / Medium / High / Critical)
+**Overall risk level:** Critical
 
 **Top 5 immediate actions:**  
-1.  
-2.  
-3.  
-4.  
-5.  
+1. Allowed or not allowed list : Do not trust client side verification. Do not create dynamic SQL queries using simple string concatenation. Apply a list of allowed and not allowed characters.
+2. Secure Password storage : Hash or encrypt all sensitive datas on the database.
+3. Enable anti CSRF token protection : Add unique and random anti-CRSF tokens to the registration form.
+4. Enforce Backend Validation: Add server-side checks for age requirements (15+). 
+5. Enforce Strong Password Policies: Define and implement minimum requirements for password length and complexity.
 
 ---
 
@@ -52,32 +52,11 @@
 
 | ID | Severity | Finding | Description | Evidence / Proof |
 |------|-----------|----------|--------------|------------------|
-| F-01 | 🔴 High | SQL Injection in registration | Input field allows `foo-bar@example.com AND 1=1 --` injection | ZAP scan |
-| F-02 | 🟠 Medium | Session fixation | Session ID remains unchanged after login | Burp log or response headers |
-| F-03 | 🟡 Low | Weak password policy | Accepts passwords like "1" | <img width="843" height="140" alt="image" src="https://github.com/user-attachments/assets/ede47e6b-5ea3-4a2b-8f1f-62190412613f" />
- |
+| F-01 | 🔴 High | SQL Injection in registration | Input field allows `AND 1=1 --` injection | ZAP scan : `foo-bar@example.com AND 1=1 --` allowed |
+| F-01 | 🔴 High | Visible Passwords | Passwords are not encrypted in the database | <img width="843" height="140" alt="image" src="https://github.com/user-attachments/assets/191c9bc4-b1e7-46b4-b502-13b924964199" /> |
+| F-02 | 🟠 Medium | Absence of birthdate verification | Allows any birthdate, ignoring the age requirement | <img width="843" height="140" alt="image" src="https://github.com/user-attachments/assets/ede47e6b-5ea3-4a2b-8f1f-62190412613f" /> |
+| F-02 | 🟠 Medium | Absence of Anti-CSRF Tokens | Lack of anti-CSRF tokens allows attackers to force unauthorized registrations | Zap Scan |
+| F-03 | 🟡 Low | Weak password policy | Accepts passwords like "a"| <img width="843" height="140" alt="image" src="https://github.com/user-attachments/assets/ede47e6b-5ea3-4a2b-8f1f-62190412613f" />|
+|
 
----
 
-> [!NOTE]
-> Include up to 5 findings total.   
-> Keep each description short and clear.
-
----
-
-# 5️⃣ OWASP ZAP Test Report (Attachment)
-
-**Purpose:**  
-- Attach or link your OWASP ZAP scan results (Markdown format preferred).
-
----
-
-**Instructions:**
-1. Check lecture recordings
-2. Save the report as `zap_report_round1.md` and link it below.
-
----
-> [!NOTE]
-> 📁 **Attach full report:** → `check itslearning` → **Add a link here**
-
----
