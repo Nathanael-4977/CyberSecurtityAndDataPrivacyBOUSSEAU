@@ -52,9 +52,10 @@
 
 | ID | Severity | Finding | Description | Evidence / Proof |
 |------|-----------|----------|--------------|------------------|
-| F-01 | 🔴 High | SQL Injection in registration | Input field allows `' OR '1'='1` injection | Screenshot or sqlmap result |
+| F-01 | 🔴 High | SQL Injection in registration | Input field allows `foo-bar@example.com AND 1=1 --` injection | ZAP scan |
 | F-02 | 🟠 Medium | Session fixation | Session ID remains unchanged after login | Burp log or response headers |
-| F-03 | 🟡 Low | Weak password policy | Accepts passwords like "1" | Screenshot of registration success |
+| F-03 | 🟡 Low | Weak password policy | Accepts passwords like "1" | <img width="843" height="140" alt="image" src="https://github.com/user-attachments/assets/ede47e6b-5ea3-4a2b-8f1f-62190412613f" />
+ |
 
 ---
 
