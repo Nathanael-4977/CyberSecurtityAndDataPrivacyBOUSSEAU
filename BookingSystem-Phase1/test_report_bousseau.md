@@ -4,7 +4,7 @@
 - Name:Nathanaël BOUSSEAU  
 
 **Purpose:**  
-- Identify vulnerabilities in the registerion system of a Booking System.
+- Identify vulnerabilities in the registration system of a Booking System.
 
 **Scope:**  
 - Tested components: Registration page(inputs and database)  
@@ -21,7 +21,7 @@
 
 # 2️⃣ Executive Summary
 
-**Short summary (1-2 sentences):**  The registration system of this booking system is critycally vulnerable to some types of attacks, including SQL injections. Datas are not encrypted and the system does not apply business rules like age restrictions.
+**Short summary (1-2 sentences):**  The registration system of this booking system is critically vulnerable to some types of attacks, including SQL injections. Data is not encrypted and the system does not apply business rules like age restrictions.
 
 **Overall risk level:** Critical
 
