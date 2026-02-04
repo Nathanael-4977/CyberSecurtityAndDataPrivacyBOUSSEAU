@@ -61,5 +61,5 @@
 
 5️⃣ OWASP ZAP Test Report (Attachment):
 
-Link to the zap test report : ./zap_report_round1
+Link to the zap test report : [./zap_report_round1](https://github.com/Nathanael-4977/CyberSecurtityAndDataPrivacyBOUSSEAU/blob/main/BookingSystem-Phase1/zap_report_round1.md)
 
