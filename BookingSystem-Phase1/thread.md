@@ -53,6 +53,7 @@ Verification (part 2) : I ran an OWASP ZAP scan again
 Result : The OWASP ZAP scan report showed the same problem again, no Anti-CRSF Tokens are present in this website.
 
 Evidence : zap_report_round2.md on github
+
 <img width="669" height="98" alt="Capture d&#39;écran 2026-02-11 161602" src="https://github.com/user-attachments/assets/58f7e84a-ae3d-40ed-aefc-048e0f4de08c" />
 
 
