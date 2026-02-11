@@ -16,3 +16,4 @@
 | 02.02.2026 | 1 | Discovering the task we have to do and installing everything (Docker, zap, ...)  | Enabling everything |
 | 03.02.2026 | 1 | Performing manual gray-box tests and Zap attack | Trying to find the most critical vulnerabilities |
 | 04.02.2026 | 1 | Writing the test report | Finishing the part 1 of the Phase 1 |
+| 11.02.2026 | 3 | Phase 1 part 2 | Finishing the part 2 of the Phase 1 |
