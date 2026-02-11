@@ -38,6 +38,7 @@ Verification (part 2) : After registering another account, I accessed again the 
 Result : The users passwords are now stored with a hash, making it more secure.
 
 Evidence : This image is the database. We can see that the passwords are now hashed.
+
 <img width="1913" height="242" alt="Capture d&#39;écran 2026-02-11 161110" src="https://github.com/user-attachments/assets/73429668-ba92-4a19-81e1-756cbfcb0cb4" />
 
 ​​​
@@ -81,6 +82,7 @@ Verification (part 2) : Again, I manually tested the password complexity by atte
 Result : The application blocked the registration and displayed an error message saying that the password should be at least 8 characters.
 
 Evidence : The error page 
+
 <img width="656" height="312" alt="Capture d&#39;écran 2026-02-11 152945" src="https://github.com/user-attachments/assets/9639bd84-42bd-4122-abf5-98d20a8021c8" />
 
 ​​​
