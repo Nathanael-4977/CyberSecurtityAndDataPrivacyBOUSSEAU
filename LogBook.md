@@ -17,3 +17,5 @@
 | 03.02.2026 | 1 | Performing manual gray-box tests and Zap attack | Trying to find the most critical vulnerabilities |
 | 04.02.2026 | 1 | Writing the test report | Finishing the part 1 of the Phase 1 |
 | 11.02.2026 | 3 | Phase 1 part 2 | Finishing the part 2 of the Phase 1 |
+| 17.02.2026 | 2 | Phase 2  - Cracking the passwords | Finishing the beginning of phase 2 |
+| 18.02.2026 | 1 | Phase 2 - Writing the report | Finishing the Phase 2 |
