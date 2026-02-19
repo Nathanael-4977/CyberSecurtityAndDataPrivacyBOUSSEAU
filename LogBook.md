@@ -19,3 +19,5 @@
 | 11.02.2026 | 3 | Phase 1 part 2 | Finishing the part 2 of the Phase 1 |
 | 17.02.2026 | 2 | Phase 2  - Cracking the passwords | Finishing the beginning of phase 2 |
 | 18.02.2026 | 1 | Phase 2 - Writing the report | Finishing the Phase 2 |
+| 19.02.2026 | 0,6 | Phase 3 - Watching the panopto video | Knowledge about authorization |
+| 19.02.2026 | 3 | Phase 3 - Doing the tests and writing te report | Finishing the Phase 2 |
