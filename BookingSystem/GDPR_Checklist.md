@@ -1,71 +1,71 @@
 # GDPR Compliance Checklist – Web-based Booking System
 
-| **Result** | **Personal data mapping and minimization** |
-| :----: | :--- |
-| &nbsp;✅/❌/⚠️&nbsp; | Have all personal data collected and processed in the system been<br> identified? (e.g., name, email, age, username) |
-| &nbsp;✅/❌/⚠️&nbsp; | Have you ensured that only necessary personal data is collected (data minimization)? |
-| &nbsp;✅/❌/⚠️&nbsp; | Is user age recorded to verify that the booker is over 15 years old? |
+| **Result** | **Personal data mapping and minimization** | **Note**|
+| :----: | :--- | :--- |
+| &nbsp;✅&nbsp; | Have all personal data collected and processed in the system been<br> identified? (e.g., name, email, age, username) |The system only processes email, birthdate and password| 
+| &nbsp;✅&nbsp; | Have you ensured that only necessary personal data is collected (data minimization)? |No additional data like phone number or address is collected when a resource is booked|
+| &nbsp;✅&nbsp; | Is user age recorded to verify that the booker is over 15 years old? |This is a rule implemented in the system|
 
 ---
 
-| **Result** | **User registration and management** |
-| :----: | :--- |
-| &nbsp;✅/❌/⚠️&nbsp; | Does the registration form (page) include GDPR-compliant consent for processing<br> personal data (e.g., acceptance of the privacy policy)?|
-| &nbsp;✅/❌/⚠️&nbsp; | Can users view, edit, and delete their own personal data via their account? |
-| &nbsp;✅/❌/⚠️&nbsp; | Is there a mechanism for the administrator to delete a reserver in<br> accordance with the "right to be forgotten"? |
-| &nbsp;✅/❌/⚠️&nbsp; | Is underage registration (under 15 years) and booking functionality restricted? |
+| **Result** | **User registration and management** | **Note**|
+| :----: | :--- | :--- |
+| &nbsp;⚠️&nbsp; | Does the registration form (page) include GDPR-compliant consent for processing<br> personal data (e.g., acceptance of the privacy policy)?|The UI includes an explicit checkbox to accept the Terms of Service, but the linked page is currently blank in the application. Since users cannot read the terms, the current implementation is legally invalid.|
+| &nbsp;⚠️&nbsp; | Can users view, edit, and delete their own personal data via their account? | Users can view their account informations but cannot update them or delete its own account |
+| &nbsp;❌&nbsp; | Is there a mechanism for the administrator to delete a reserver in<br> accordance with the "right to be forgotten"? | The current administrator interface lacks the actual functionality to delete a user account. This prevents the system from complying with the "right to be forgotten"|
+| &nbsp;✅&nbsp; | Is underage registration (under 15 years) and booking functionality restricted? | To login, you cannot say that you are under 15. For every guest, the booking functionality is restricted |
 
 ---
 
-| **Result** | **Booking visibility** |
-| :----: | :--- |
-| &nbsp;✅/❌/⚠️&nbsp; | Are bookings visible to non-logged-in users only at the resource level<br> (without any personal data)? |
-| &nbsp;✅/❌/⚠️&nbsp; | Is it ensured that names, emails, or other personal data of bookers are not exposed<br> publicly or to unauthorized users? |
+| **Result** | **Booking visibility** | **Note**|
+| :----: | :--- | :--- |
+| &nbsp;✅&nbsp; | Are bookings visible to non-logged-in users only at the resource level<br> (without any personal data)? | The reservor email is hidden when someone is not logged in |
+| &nbsp;✅&nbsp; | Is it ensured that names, emails, or other personal data of bookers are not exposed<br> publicly or to unauthorized users? | The reservor email is hidden when someone is not logged in |
 
 --- 
 
-| **Result** | **Access control and authorization** |
-| :----: | :--- |
-| &nbsp;✅/❌/⚠️&nbsp; | Have you ensured that only administrators can add, modify, and delete<br> resources and bookings? |
-| &nbsp;✅/❌/⚠️&nbsp; | Is the system using role-based access control (e.g., reserver vs. administrator)? |
-| &nbsp;✅/❌/⚠️&nbsp; | Are administrator privileges limited to ensure GDPR compliance (e.g., administrators<br> cannot use data for unauthorized purposes)? |
+| **Result** | **Access control and authorization** | **Note**|
+| :----: | :--- | :--- |
+| &nbsp;❌&nbsp; | Have you ensured that only administrators can add, modify, and delete<br> resources and bookings? | Reservors can also modify or delete another user booking. This is a severe security breach |
+| &nbsp;⚠️&nbsp; | Is the system using role-based access control (e.g., reserver vs. administrator)? | Theoritically yes, but as  we said before, there is a security breach allowing users to act as administrator |
+| &nbsp;⚠️&nbsp; | Are administrator privileges limited to ensure GDPR compliance (e.g., administrators<br> cannot use data for unauthorized purposes)? | Limited by the terms of service but they have total access to the database |
 
 ---
 
-| **Result** | **Privacy by Design Principles** |
-| :----: | :--- |
-| &nbsp;✅/❌/⚠️&nbsp; | Has Privacy by Default been implemented (e.g., collecting the minimum data by default)? |
-| &nbsp;✅/❌/⚠️&nbsp; | Are logs implemented without unnecessarily storing personal data? |
-| &nbsp;✅/❌/⚠️&nbsp; | Are forms and system components designed with data protection in mind<br> (e.g., secured login, minimal fields)? |
+| **Result** | **Privacy by Design Principles** | **Note**|
+| :----: | :--- | :--- |
+| &nbsp;✅&nbsp; | Has Privacy by Default been implemented (e.g., collecting the minimum data by default)? | Yes |
+| &nbsp;✅&nbsp; | Are logs implemented without unnecessarily storing personal data? | Yes |
+| &nbsp;✅&nbsp; | Are forms and system components designed with data protection in mind<br> (e.g., secured login, minimal fields)? | Yes |
 
 ---
 
-| **Result** | **Data security** |
-| :----: | :--- |
-| &nbsp;✅/❌/⚠️&nbsp; | Are CSRF, XSS, and SQL injection protections implemented? |
+| **Result** | **Data security** | **Note**|
+| :----: | :--- | :--- |
+| &nbsp;✅&nbsp; | Are CSRF, XSS, and SQL injection protections implemented? | 
 | &nbsp;✅/❌/⚠️&nbsp; | Are passwords securely hashed using a strong algorithm (e.g., bcrypt, Argon2)? |
 | &nbsp;✅/❌/⚠️&nbsp; | Are data backup and recovery processes GDPR-compliant? |
 | &nbsp;✅/❌/⚠️&nbsp; | Is personal data stored in data centers located within the EU? |
 
 ---
 
-| **Result** | **Data anonymization and pseudonymization** |
-| :----: | :--- |
+| **Result** | **Data anonymization and pseudonymization** | **Note**|
+| :----: | :--- | :--- |
 | &nbsp;✅/❌/⚠️&nbsp; | Is personal data anonymized where possible? |
 | &nbsp;✅/❌/⚠️&nbsp; | Are pseudonymization techniques used to protect data while maintaining its utility? |
 
 ---
 
-| **Result** | **Data subject rights** |
-| :----: | :--- |
+| **Result** | **Data subject rights** | **Note**|
+| :----: | :--- | :--- |
 | &nbsp;✅/❌/⚠️&nbsp; | Can users download or request all personal data related to them (data access request)? |
 | &nbsp;✅/❌/⚠️&nbsp; | Is there an interface or process for users to request the deletion of their personal data? |
 | &nbsp;✅/❌/⚠️&nbsp; | Can users withdraw their consent for data processing? |
 
 ---
 
-| **Result** | **Documentation and communication** |
-| :----: | :--- |
+| **Result** | **Documentation and communication** | **Note**|
+| :----: | :--- | :--- |
 | &nbsp;✅/❌/⚠️&nbsp; | Is there a privacy policy available to users during registration and easily accessible? |
 | &nbsp;✅/❌/⚠️&nbsp; | Are administrators and developers provided with documented data protection practices <br>and processing activities? |
 | &nbsp;✅/❌/⚠️&nbsp; | Is there a documented data breach response process (e.g., how to notify authorities <br>and users of a breach)? |
