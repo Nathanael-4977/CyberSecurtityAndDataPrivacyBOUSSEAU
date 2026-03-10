@@ -26,7 +26,7 @@
 
 | **Result** | **Access control and authorization** | **Note**|
 | :----: | :--- | :--- |
-| &nbsp;❌&nbsp; | Have you ensured that only administrators can add, modify, and delete<br> resources and bookings? | Reservors can also modify or delete another user booking. This is a severe security breach |
+| &nbsp;❌&nbsp; | Have you ensured that only administrators can add, modify, and delete<br> resources and bookings? | Reservors can also modify or delete another user booking. This is a severe security breach. Also, reservers can add a resource. |
 | &nbsp;⚠️&nbsp; | Is the system using role-based access control (e.g., reserver vs. administrator)? | Theoritically yes, but as  we said before, there is a security breach allowing users to act as administrator |
 | &nbsp;⚠️&nbsp; | Are administrator privileges limited to ensure GDPR compliance (e.g., administrators<br> cannot use data for unauthorized purposes)? | Limited by the terms of service but they have total access to the database |
 
@@ -43,32 +43,32 @@
 | **Result** | **Data security** | **Note**|
 | :----: | :--- | :--- |
 | &nbsp;⚠️&nbsp; | Are CSRF, XSS, and SQL injection protections implemented? | Yes, but beware of the IDOR attacks | 
-| &nbsp;✅&nbsp; | Are passwords securely hashed using a strong algorithm (e.g., bcrypt, Argon2)? |  |
+| &nbsp;✅&nbsp; | Are passwords securely hashed using a strong algorithm (e.g., bcrypt, Argon2)? | Yes |
 | &nbsp;❌&nbsp; | Are data backup and recovery processes GDPR-compliant? | Currently running on local Docker containers without a documented, encrypted backup strategy |
-| &nbsp;✅/❌/⚠️&nbsp; | Is personal data stored in data centers located within the EU? | Yes, in local |
+| &nbsp;✅&nbsp; | Is personal data stored in data centers located within the EU? | Yes, in local |
 
 ---
 
 | **Result** | **Data anonymization and pseudonymization** | **Note**|
 | :----: | :--- | :--- |
-| &nbsp;✅/❌/⚠️&nbsp; | Is personal data anonymized where possible? |
-| &nbsp;✅/❌/⚠️&nbsp; | Are pseudonymization techniques used to protect data while maintaining its utility? |
+| &nbsp;⚠️&nbsp; | Is personal data anonymized where possible? | A login user can see the mail of a reserver. It is not necessary for him to see who booked a ressource |
+| &nbsp;⚠️&nbsp; | Are pseudonymization techniques used to protect data while maintaining its utility? | No complex pseudonimization is actively used in the database |
 
 ---
 
 | **Result** | **Data subject rights** | **Note**|
 | :----: | :--- | :--- |
-| &nbsp;✅/❌/⚠️&nbsp; | Can users download or request all personal data related to them (data access request)? |
-| &nbsp;✅/❌/⚠️&nbsp; | Is there an interface or process for users to request the deletion of their personal data? |
-| &nbsp;✅/❌/⚠️&nbsp; | Can users withdraw their consent for data processing? |
+| &nbsp;⚠️&nbsp; | Can users download or request all personal data related to them (data access request)? | There is no download my data button. To do it, a user have to contact an administrator. |
+| &nbsp;⚠️&nbsp; | Is there an interface or process for users to request the deletion of their personal data? | Same as above. But accorded to the policy, a user can ask for it. |
+| &nbsp;⚠️&nbsp; | Can users withdraw their consent for data processing? | The booking system does not ask for any consent. The legal basis is a contract. To withdraw, they must terminate the contract by deleting their account.|
 
 ---
 
 | **Result** | **Documentation and communication** | **Note**|
 | :----: | :--- | :--- |
-| &nbsp;✅/❌/⚠️&nbsp; | Is there a privacy policy available to users during registration and easily accessible? |
-| &nbsp;✅/❌/⚠️&nbsp; | Are administrators and developers provided with documented data protection practices <br>and processing activities? |
-| &nbsp;✅/❌/⚠️&nbsp; | Is there a documented data breach response process (e.g., how to notify authorities <br>and users of a breach)? |
+| &nbsp;⚠️&nbsp; | Is there a privacy policy available to users during registration and easily accessible? | The document is written but not available on th emain page yet. |
+| &nbsp;❌&nbsp; | Are administrators and developers provided with documented data protection practices <br>and processing activities? |While public documentations have been made, no internal documentation is existing at the moment. The administrators are then in the obligation to follow the public documents rules but have no other specifications. |
+| &nbsp;❌&nbsp; | Is there a documented data breach response process (e.g., how to notify authorities <br>and users of a breach)? | No response plan exists if the database is compromised. |
 
 ---
 
