@@ -21,3 +21,4 @@
 | 18.02.2026 | 1 | Phase 2 - Writing the report | Finishing the Phase 2 |
 | 19.02.2026 | 1 | Phase 3 - Watching the panopto video | Knowledge about authorization |
 | 19.02.2026 | 3 | Phase 3 - Doing the tests and writing te report | Finishing the Phase 2 |
+| 07.03.2026 | 3 | Phase 3 - Doing the tests and writing te report | Finishing the Phase 2 |
