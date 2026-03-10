@@ -19,14 +19,14 @@
 
 | **Result** | **Booking visibility** | **Note**|
 | :----: | :--- | :--- |
-| &nbsp;✅&nbsp; | Are bookings visible to non-logged-in users only at the resource level<br> (without any personal data)? | The reservor email is hidden when someone is not logged in |
-| &nbsp;✅&nbsp; | Is it ensured that names, emails, or other personal data of bookers are not exposed<br> publicly or to unauthorized users? | The reservor email is hidden when someone is not logged in |
+| &nbsp;✅&nbsp; | Are bookings visible to non-logged-in users only at the resource level<br> (without any personal data)? | The reserver email is hidden when someone is not logged in |
+| &nbsp;✅&nbsp; | Is it ensured that names, emails, or other personal data of bookers are not exposed<br> publicly or to unauthorized users? | The reserver email is hidden when someone is not logged in |
 
 --- 
 
 | **Result** | **Access control and authorization** | **Note**|
 | :----: | :--- | :--- |
-| &nbsp;❌&nbsp; | Have you ensured that only administrators can add, modify, and delete<br> resources and bookings? | Reservors can also modify or delete another user booking. This is a severe security breach. Also, reservers can add a resource. |
+| &nbsp;❌&nbsp; | Have you ensured that only administrators can add, modify, and delete<br> resources and bookings? | Reservers can also modify or delete another user booking. This is a severe security breach. Also, reservers can add a resource. |
 | &nbsp;⚠️&nbsp; | Is the system using role-based access control (e.g., reserver vs. administrator)? | Theoritically yes, but as  we said before, there is a security breach allowing users to act as administrator |
 | &nbsp;⚠️&nbsp; | Are administrator privileges limited to ensure GDPR compliance (e.g., administrators<br> cannot use data for unauthorized purposes)? | Limited by the terms of service but they have total access to the database |
 
@@ -36,7 +36,7 @@
 | :----: | :--- | :--- |
 | &nbsp;✅&nbsp; | Has Privacy by Default been implemented (e.g., collecting the minimum data by default)? | Yes |
 | &nbsp;✅&nbsp; | Are logs implemented without unnecessarily storing personal data? | Yes |
-| &nbsp;✅&nbsp; | Are forms and system components designed with data protection in mind<br> (e.g., secured login, minimal fields)? | Yes |
+| &nbsp;⚠️&nbsp; | Are forms and system components designed with data protection in mind<br> (e.g., secured login, minimal fields)? | Backend components lack proper authorization checks (IDOR) |
 
 ---
 
@@ -58,15 +58,15 @@
 
 | **Result** | **Data subject rights** | **Note**|
 | :----: | :--- | :--- |
-| &nbsp;⚠️&nbsp; | Can users download or request all personal data related to them (data access request)? | There is no download my data button. To do it, a user have to contact an administrator. |
-| &nbsp;⚠️&nbsp; | Is there an interface or process for users to request the deletion of their personal data? | Same as above. But accorded to the policy, a user can ask for it. |
+| &nbsp;⚠️&nbsp; | Can users download or request all personal data related to them (data access request)? | There is no download my data button. To do it, a user has to contact an administrator. |
+| &nbsp;⚠️&nbsp; | Is there an interface or process for users to request the deletion of their personal data? | Same as above. But according to the policy, a user can ask for it. |
 | &nbsp;⚠️&nbsp; | Can users withdraw their consent for data processing? | The booking system does not ask for any consent. The legal basis is a contract. To withdraw, they must terminate the contract by deleting their account.|
 
 ---
 
 | **Result** | **Documentation and communication** | **Note**|
 | :----: | :--- | :--- |
-| &nbsp;⚠️&nbsp; | Is there a privacy policy available to users during registration and easily accessible? | The document is written but not available on th emain page yet. |
+| &nbsp;⚠️&nbsp; | Is there a privacy policy available to users during registration and easily accessible? | The document is written but not available on the main page yet. |
 | &nbsp;❌&nbsp; | Are administrators and developers provided with documented data protection practices <br>and processing activities? |While public documentations have been made, no internal documentation is existing at the moment. The administrators are then in the obligation to follow the public documents rules but have no other specifications. |
 | &nbsp;❌&nbsp; | Is there a documented data breach response process (e.g., how to notify authorities <br>and users of a breach)? | No response plan exists if the database is compromised. |
 
