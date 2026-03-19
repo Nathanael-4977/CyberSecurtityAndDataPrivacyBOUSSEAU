@@ -19,7 +19,7 @@
 | 11.02.2026 | 4 | Phase 1 part 2 | Finishing the part 2 of the Phase 1 |
 | 17.02.2026 | 5 | Phase 2  - Cracking the passwords and watching the course | Finishing the beginning of phase 2 |
 | 18.02.2026 | 3 | Phase 2 - Writing the report | Finishing the Phase 2 |
-| 19.02.2026 | 7 | Phase 3 - Doing the tests, writing te report and watching the course | Finishing the Phase 3 |
+| 18.02.2026-19.02.2026 | 7 | Phase 3 - Doing the tests, writing te report and watching the course | Finishing the Phase 3 |
 | 03.03.2026 | 1 | Assesing a lab | Doing the lab |
 | 07.03.2026 | 3 | Phase 4 - Doing the documents cookiepolicy, privacyoplicy and termsofservice | Finishing 75% of the task |
 | 10.03.2026 | 4 | Phase 4 - Doing the document GDPR_Checklist | Finishing the Phase 4 |
